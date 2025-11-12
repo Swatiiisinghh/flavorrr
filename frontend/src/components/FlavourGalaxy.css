@@ -1,0 +1,24 @@
+/* src/styles/FlavorGalaxy.css */
+.flavor-galaxy {
+  position: relative;
+  height: 60vh;
+  background: radial-gradient(circle, #ffecd2, #fcb69f);
+  overflow: hidden;
+}
+
+.flavor-galaxy__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.flavor-galaxy__overlay h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px #000;
+}

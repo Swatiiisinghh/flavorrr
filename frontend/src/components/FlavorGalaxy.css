@@ -1,0 +1,116 @@
+/* src/styles/FlavorGalaxy.css */
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+  }
+  
+  .flavor-galaxy {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, #ffecd2, #fcb69f);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .flavor-galaxy__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  .flavor-galaxy__header {
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  .flavor-galaxy__header h1 {
+    font-size: 4rem;
+    font-family: "Pacifico", cursive;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  .flavor-galaxy__header p {
+    font-size: 1.5rem;
+    color: #ffffffc7;
+  }
+  
+  .flavor-galaxy__footer {
+    z-index: 2;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(45deg, #fcb69f, #fc8460);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .flavor-galaxy__stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+    opacity: 0;
+  }
+  
+  .star:nth-child(odd) {
+    animation-duration: 5s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  

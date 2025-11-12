@@ -1,0 +1,126 @@
+/* src/styles/UserDashboard.css */
+.user-dashboard {
+  margin: 2rem;
+}
+
+.user-dashboard__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Added gap for spacing between badges */
+}
+
+.user-dashboard__badge {
+  background-color: #fcb69f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin: 0.5rem;
+  opacity: 0; /* Start with badges invisible */
+  transform: scale(0); /* Start with badges scaled down */
+  animation: popUp 0.6s ease-out forwards; /* Pop-up animation */
+}
+
+/* Delay each badge's pop-up effect */
+.user-dashboard__badge:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.user-dashboard__badge:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.user-dashboard__badge:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.user-dashboard__badge:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.user-dashboard__badge:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.user-dashboard__badge:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.user-dashboard__badge:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.user-dashboard__badge:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.user-dashboard__badge:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.user-dashboard__badge:nth-child(10) {
+  animation-delay: 1s;
+}
+/* Add more delay for additional badges as necessary */
+
+/* Pop-up keyframe animation */
+@keyframes popUp {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Recipe List Styling */
+.user-dashboard__recipes {
+  list-style: none;
+  padding: 0;
+}
+
+.user-dashboard__recipes li {
+  margin: 0.5rem 0;
+}
+
+/* Typing effect styling */
+.user-dashboard__welcome {
+  font-size: 2rem; /* Increase the font size */
+  font-weight: bold;
+  color: transparent; /* Make text initially transparent to simulate typing */
+  background-image: linear-gradient(90deg, #000000 50%, transparent 50%); /* Gradient to black */
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background-color 0.5s ease-in-out; /* Smooth transition for effect */
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+
+  /* Add underline effect */
+  text-decoration: underline;
+  text-decoration-color: black; /* Black underline */
+  text-decoration-thickness: 3px; /* Control thickness of the underline */
+}
+
+.user-dashboard__welcome {
+  font-size: 2rem;
+  font-weight: bold;
+  color: transparent;
+  background-image: linear-gradient(90deg, #000000 50%, transparent 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background-position 0.5s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 3px;
+  background-size: 200% 100%;
+  animation: typing 2s steps(50) forwards;
+}
+
+@keyframes typing {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

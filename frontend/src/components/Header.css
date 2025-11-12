@@ -1,0 +1,64 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff5e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Limit the width */
+  margin: 0 auto;
+  border-radius: 10px; /* Add rounded corners to the header */
+  transition: all 0.3s ease; /* Smooth transition for hover or focus effects */
+}
+
+.header:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+  transform: translateY(-5px); /* Elevate the header when hovered */
+}
+
+.header__logo img {
+  height: 50px;
+  margin-right: 1rem;
+  transition: transform 0.3s ease; /* Smooth scaling of the logo */
+}
+
+.header__logo img:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and movement */
+}
+
+.header__nav a:hover {
+  color: #ff7f50; /* Change color on hover */
+  transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+.header__nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Position the underline just below the text */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff7f50; /* Underline color */
+  transform: scaleX(0); /* Initially the underline is not visible */
+  transition: transform 0.3s ease; /* Smooth transition for the underline */
+}
+
+.header__nav a:hover::after {
+  transform: scaleX(1); /* Make the underline appear on hover */
+}

@@ -1,0 +1,110 @@
+/* src/styles/FlavorPairingMatrix.css */
+
+/* Flavor Pairing Matrix Styling */
+.flavor-pairing-matrix {
+  overflow-x: auto;
+  margin: 2rem auto; /* Centers the matrix horizontally */
+  padding: 1rem;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 1200px;
+}
+
+.flavor-pairing-matrix table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Roboto', sans-serif; /* Cleaner font for better readability */
+}
+
+.flavor-pairing-matrix th,
+.flavor-pairing-matrix td {
+  border: 1px solid #ddd;
+  padding: 1rem; /* Unified padding */
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth background & scale transition */
+  border-radius: 8px; /* Rounded corners for table cells */
+}
+
+/* Header Styling */
+.flavor-pairing-matrix th {
+  background-color: #ff7043; /* Bold orange background for header */
+  color: white;
+  font-weight: bold;
+  cursor: pointer; /* Indicates interactivity */
+}
+
+.flavor-pairing-matrix th:hover {
+  background-color: #ff5722; /* Darker orange for header hover */
+  transform: scale(1.05); /* Slight scale for interactivity */
+}
+
+/* Table Data (Cells) Styling */
+.flavor-pairing-matrix td {
+  background-color: #fff;
+}
+
+.flavor-pairing-matrix td:hover {
+  background-color: #ff7f50; /* Light coral background on cell hover */
+  cursor: pointer;
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow on hover */
+}
+
+/* Alternate Row Colors for Better Readability */
+.flavor-pairing-matrix tr:nth-child(even) td {
+  background-color: #f1f1f1;
+}
+
+.flavor-pairing-matrix tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+.flavor-pairing-matrix tr:hover td {
+  background-color: #ffb3a1; /* Highlight entire row on hover */
+}
+
+/* Optional: If using a specific cell class for additional styling */
+.flavor-pairing-matrix__cell:hover {
+  background-color: #ff7f50;
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .flavor-pairing-matrix {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+
+  .flavor-pairing-matrix th,
+  .flavor-pairing-matrix td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .flavor-pairing-matrix {
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .flavor-pairing-matrix th,
+  .flavor-pairing-matrix td {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .flavor-pairing-matrix th:hover,
+  .flavor-pairing-matrix td:hover,
+  .flavor-pairing-matrix__cell:hover {
+    transform: scale(1.02); /* Slightly smaller scale on smaller screens */
+  }
+}

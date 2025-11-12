@@ -1,0 +1,30 @@
+/* Compatibility Checker Section */
+.recipe-compatibility-checker {
+  background: radial-gradient(circle, #ffecd2, #fcb69f);
+  border-radius: 12px; /* Optional for a softer edge */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px 0;
+  color: #333;
+  text-align: center;
+}
+
+/* Update Header Text */
+.recipe-compatibility-checker h1, .recipe-compatibility-checker h2 {
+  color: #333; /* Ensures text is readable */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Slight shadow for emphasis */
+}
+
+/* Dropdown Styling */
+.recipe-compatibility-checker select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff; /* Slight contrast with gradient */
+  transition: border-color 0.3s;
+}
+
+.recipe-compatibility-checker select:focus {
+  border-color: #ff7f50; /* Matches the theme */
+  outline: none;
+}

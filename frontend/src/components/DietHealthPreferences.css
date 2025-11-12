@@ -1,0 +1,42 @@
+.diet-health-preferences {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+    gap: 2rem; /* Adds space between items */
+  margin: 2rem 0;
+  }
+  
+  .diet-health-preferences__icon {
+    margin: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 1.2rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Circle shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: all 0.3s ease; /* Smooth transitions */
+  cursor: pointer;
+    color: #333;
+  }
+  
+  .diet-health-preferences__icon:hover {
+    background: linear-gradient(45deg, #ff7f50, #fcb69f); /* Gradient hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  .diet-health-preferences__icon .icon {
+    font-size: 3rem;
+    font-size: 3rem; /* Icon size */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .diet-health-preferences__icon:hover {
+    color: #ff7f50;
+  .diet-health-preferences__icon:hover .icon {
+    color: white; /* Change icon color on hover */
+  }

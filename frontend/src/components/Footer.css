@@ -1,0 +1,9 @@
+/* src/styles/Footer.css */
+.footer {
+  background-color: #fff5e6;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

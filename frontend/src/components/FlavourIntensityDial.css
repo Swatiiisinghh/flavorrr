@@ -1,0 +1,9 @@
+/* src/styles/FlavorIntensityDial.css */
+.flavor-intensity-dial {
+  text-align: center;
+  margin: 2rem;
+}
+
+.flavor-intensity-dial__slider {
+  width: 300px;
+}

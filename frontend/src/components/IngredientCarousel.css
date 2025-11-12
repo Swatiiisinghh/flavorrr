@@ -1,0 +1,27 @@
+/* src/styles/IngredientCarousel.css */
+.ingredient-carousel {
+  display: flex;
+  overflow-x: auto;
+  margin: 2rem;
+  padding-bottom: 1rem;
+}
+
+.ingredient-carousel__card {
+  flex: 0 0 auto;
+  width: 250px;
+  margin-right: 1rem;
+  background-color: #ffecd2;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.ingredient-carousel__card h3 {
+  margin-top: 0;
+}
+
+.ingredient-carousel__card:hover {
+  background-color: #fcb69f;
+  color: white;
+}

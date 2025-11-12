@@ -1,0 +1,88 @@
+/* src/components/SensoryMappingDashboard.css */
+
+.sensory-mapping-dashboard {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.sensory-mapping-dashboard h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.sensory-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sensory-control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sensory-control label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.sensory-control select,
+.sensory-control input[type="range"] {
+  width: 100%;
+  padding: 5px;
+}
+
+.sensory-control span {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #777;
+}
+
+.results-section {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.results-section h3 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.ambiance {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #007BFF;
+}
+
+.playlist-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1DB954; /* Spotify Green */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.playlist-link:hover {
+  background-color: #17a44c;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .sensory-mapping-dashboard {
+    padding: 10px;
+  }
+
+  .playlist-link {
+    width: 100%;
+    text-align: center;
+  }
+}

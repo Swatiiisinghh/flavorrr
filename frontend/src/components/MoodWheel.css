@@ -1,0 +1,142 @@
+:root {
+  --wheel-size: 420px; /* Diameter of the wheel */
+  --button-size: 60px; /* Diameter of each button */
+  --button-bg-color: #FF6F61; /* Button background color */
+  --button-text-color: #ffffff; /* Button text color */
+  --button-hover-bg-color: #e05748; /* Button background on hover */
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color */
+  --label-color: #333333; /* Label text color */
+  --wheel-bg-color: rgba(255, 215, 150, 0.9); /* Wheel background color */
+  --divider-color: #ffffff; /* Divider line color */
+}
+
+/* Container Styling */
+.mood-wheel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 140px auto;
+  position: relative;
+}
+
+/* Wheel Styling */
+.mood-wheel {
+  position: relative;
+  width: var(--wheel-size);
+  height: var(--wheel-size);
+  border-radius: 60%;
+  background: var(--wheel-bg-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mood-wheel__center {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Mood Option Positioning */
+.mood-wheel__option {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform-origin: center center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Button Styling */
+.mood-wheel__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--button-size);
+  height: var(--button-size);
+  background-color: var(--button-bg-color);
+  border: none;
+  border-radius: 50%;
+  color: var(--button-text-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.mood-wheel__button:hover,
+.mood-wheel__button:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  background-color: var(--button-hover-bg-color);
+  outline: none;
+}
+
+/* Icon Styling */
+.mood-wheel__icon {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+/* Text Styling */
+.mood-wheel__text {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* Dividing Lines */
+.mood-wheel__dividers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mood-wheel__divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 50%;
+  background-color: var(--divider-color);
+  transform-origin: center bottom;
+}
+
+/* Label Styling */
+.mood-wheel__label {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: var(--label-color);
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  :root {
+    --wheel-size: 230px;
+    --button-size: 50px;
+  }
+
+  .mood-wheel__icon {
+    font-size: 1.2rem;
+  }
+
+  .mood-wheel__text {
+    font-size: 0.7rem;
+  }
+
+  .mood-wheel__label {
+    font-size: 1rem;
+  }
+}
+
+/* Optional: Slight Wheel Rotation on Hover */
+.mood-wheel-container:hover .mood-wheel {
+  transform: rotate(20deg);
+}
